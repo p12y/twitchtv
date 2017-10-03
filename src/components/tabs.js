@@ -14,19 +14,21 @@ class TabNav extends Component {
   }
 
   render() {
-    const { channels, streams } = this.props;
-    console.log('c', this.props.channels);
-    console.log('s', this.props.streams);
+    const channels = this.props.channels;
+    const allChannels = channels.online.concat(channels.offline);
+    const onlineChannels = channels.online;
+    const offlineChannels = channels.offline;
+
     return (
       <Tabs activeKey={this.state.key} onSelect={this.handleSelect} id="controlled-tab">
         <Tab eventKey={1} title="All">
-          <ChannelList color="panel-primary" title="All" channels={channels} streams={streams} />
+          <ChannelList color="panel-primary" title="All" channels={allChannels} />
         </Tab>
         <Tab eventKey={2} title="Online">
-          <ChannelList color="panel-success" title="Online" channels={channels} streams={streams} />
+          <ChannelList color="panel-success" title="Online" channels={onlineChannels} />
         </Tab>
         <Tab eventKey={3} title="Offline">
-          <ChannelList color="panel-info" title="Offline" channels={channels} streams={streams} />
+          <ChannelList color="panel-info" title="Offline" channels={offlineChannels} />
         </Tab>
       </Tabs>
     );
