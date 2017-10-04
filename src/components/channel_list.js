@@ -2,7 +2,13 @@ import React from 'react';
 import ChannelItem from './channel_item';
 
 const ChannelList = (props) => {
-  const { color, title, channels } = props;
+  const { color, title } = props;
+  
+  if (!props.channels || !props.streams) {
+    return (
+      <div>Loading...</div>
+    )
+  }
 
   return (
     <div className={`panel ${color}`}>
@@ -11,12 +17,12 @@ const ChannelList = (props) => {
       </div>
       <div className="panel-body">
         <ul>
-          {channels.map((channel, index) => {
+          {props.channels.map((channel, index) => {
             return (
-              <li key={channel.display_name}>
-                <ChannelItem channel={channel} />
+              <li className="channel" key={channel.display_name} >
+                <ChannelItem channel={channel} stream={props.streams[index]}/>
               </li>
-            );
+            )
           })}
         </ul>
       </div>

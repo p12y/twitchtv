@@ -1,0 +1,15 @@
+.display-name, .status {
+  padding: 0 2em 0 2em;
+}
+
+.status {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li.channel {
+  padding: 1.5em;
+}
