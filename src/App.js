@@ -6,7 +6,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header><h1 className="text-center"></h1></header>
+        <header>
+          <h1 className="text-center">
+            <strong>Twitch Streamer</strong>
+            <br />
+            <small>Find out what's streaming on Twitch.tv</small>
+          </h1>
+        </header>
         <Tabs />
       </div>
     );
