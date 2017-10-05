@@ -1,3 +1,20 @@
+h1 {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.panel-body a {
+  color: #C7C7C7;
+}
+
+.panel-body a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .display-name, .status {
   padding: 0 2em 0 2em;
 }
@@ -15,6 +32,14 @@ li.channel {
   padding: 1.5em;
 }
 
-.online {
+.online a {
   color: #ADE6AD;
+}
+
+.online a:hover {
+  color: rgb(228, 255, 228);
+}
+
+.display-name {
+  font-weight: bold;
 }

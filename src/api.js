@@ -1,16 +1,26 @@
 
-export function getChannels(name, cb) {
+function handleErrors(response) {
+  if (!response.ok) {
+    throw Error(response.statusText);
+    return false;
+  }
+  return response;
+}
+
+export function getChannels(name, callback) {
   fetch(`https://wind-bow.glitch.me/twitch-api/channels/${name}`)
-  .then(d => d.json())
-  .then(d => {
-    return cb(null, d)
+  .then(handleErrors)
+  .then(data => data.json())
+  .then(data => {
+    return callback(null, data)
   });
 }
 
-export function getStreams(name, cb) {
+export function getStreams(name, callback) {
   fetch(`https://wind-bow.glitch.me/twitch-api/streams/${name}`)
-  .then(d => d.json())
-  .then(d => {
-    return cb(null, d)
+  .then(handleErrors)
+  .then(data => data.json())
+  .then(data => {
+    return callback(null, data)
   });
 }

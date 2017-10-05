@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Tabs from './components/tabs.js';
 import './App.css';
-import { render } from 'react-dom';
 
 class App extends Component {
   render() {

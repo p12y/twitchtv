@@ -19,9 +19,11 @@ const ChannelItem = (props) => {
   
   return (
     <div className={status}>
-      <img src={channel.logo} style={{width: 50}} className="img-circle" alt="Cinque Terre" />
-      <span className="display-name">{channel.display_name}</span>
-      <span className="currently-playing">{currentlyPlaying}</span>
+      <a href={channel.url}>
+        <img src={channel.logo} style={{width: 50}} className="img-circle" alt="Cinque Terre" />
+        <span className="display-name">{channel.display_name}</span>
+        <span className="currently-playing">{currentlyPlaying}</span>
+      </a>
     </div>
   );
 }
