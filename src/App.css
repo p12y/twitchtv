@@ -4,6 +4,7 @@
 
 .status {
   float: right;
+  color: #858585;
 }
 
 ul {
@@ -12,4 +13,8 @@ ul {
 
 li.channel {
   padding: 1.5em;
+}
+
+.online {
+  color: #ADE6AD;
 }
