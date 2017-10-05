@@ -12,7 +12,7 @@ a {
 
 .panel-body a:hover {
   text-decoration: none;
-  color: #FFFFFF;
+  color: rgb(220, 220, 220);
 }
 
 .display-name, .status {
@@ -33,11 +33,11 @@ li.channel {
 }
 
 .online a {
-  color: #ADE6AD;
+  color: #FFFFFF;
 }
 
 .online a:hover {
-  color: rgb(228, 255, 228);
+  color: rgb(220, 220, 220);
 }
 
 .display-name {
