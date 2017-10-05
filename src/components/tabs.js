@@ -42,8 +42,7 @@ class TabNav extends Component {
       <Tabs activeKey={this.state.key} onSelect={this.handleSelect} id="controlled-tab">
         <Tab eventKey={1} title="All">
           <ChannelList 
-            color="panel-primary" 
-            title="All" 
+            color="purple" 
             channels={this.state.channels} 
             streams={this.state.streams} 
           />
@@ -51,15 +50,13 @@ class TabNav extends Component {
         <Tab eventKey={2} title="Online">
           <ChannelList 
             color="panel-success" 
-            title="Online" 
             channels={this.state.online} 
             streams={this.state.streams} 
           />
         </Tab>
         <Tab eventKey={3} title="Offline">
           <ChannelList 
-            color="panel-info" 
-            title="Offline" 
+            color="gray" 
             channels={this.state.offline} 
             streams={this.state.streams.slice(this.state.online.length)} 
           />

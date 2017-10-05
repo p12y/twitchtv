@@ -2,7 +2,7 @@ import React from 'react';
 import ChannelItem from './channel_item';
 
 const ChannelList = (props) => {
-  const { color, title } = props;
+  const { color } = props;
   
   if (!props.channels || !props.streams) {
     return (
@@ -13,7 +13,6 @@ const ChannelList = (props) => {
   return (
     <div className={`panel ${color}`}>
       <div className="panel-heading">
-        <h3 className="panel-title">{title}</h3>
       </div>
       <div className="panel-body">
         <ul>

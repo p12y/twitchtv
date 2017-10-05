@@ -43,3 +43,30 @@ li.channel {
 .display-name {
   font-weight: bold;
 }
+
+.panel {
+  -webkit-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 25px -9px rgba(0,0,0,0.75);
+}
+
+.panel.purple .panel-heading {
+  background: #6441a4;
+}
+
+.panel.gray .panel-heading {
+  background: #687a7f;
+}
+
+li.active #controlled-tab-tab-1 {
+  background-color: #6441a4;
+}
+
+li.active #controlled-tab-tab-2 {
+  background-color: #5cb85c
+}
+
+li.active #controlled-tab-tab-3 {
+  background-color: #687a7f;
+}
+
